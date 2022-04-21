@@ -1,0 +1,13 @@
+# Blender MTL File: 'WeirdThingSculptTest.blend'
+# Material Count: 1
+
+newmtl Weird_Thing
+Ns 299.476042
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.129921 0.129921 0.129921
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\temp\\FMP\\Frank's Toy Store\\Assets\\Textures\\ToyTexture.png

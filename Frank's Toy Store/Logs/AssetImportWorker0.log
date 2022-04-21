@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.18f1 (25bdc3efbc2d) revision 2473411'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1586; Version 2009; 64bit' Language: 'en' Physical Memory: 32716 MB
+OS: 'Windows 10 Pro; OS build 19043.1645; Version 2009; 64bit' Language: 'en' Physical Memory: 32716 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/temp/FMP/Frank's Toy Store
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57969
+60651
 Successfully changed project path to: C:/temp/FMP/Frank's Toy Store
 C:/temp/FMP/Frank's Toy Store
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 110.52 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 133.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.18f1 (25bdc3efbc2d)
 [Subsystems] Discovering subsystems at path D:/Unity/Unity 2021.1.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,45 +35,45 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Unity 2021.1.18f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Unity 2021.1.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/Unity 2021.1.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56028
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56200
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/Unity 2021.1.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002753 seconds.
+Registered in 0.003287 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 111.12 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 145.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  8.598 seconds
+- Completed reload, in 11.826 seconds
 Domain Reload Profiling:
-	ReloadAssembly (8600ms)
-		BeginReloadAssembly (134ms)
+	ReloadAssembly (11829ms)
+		BeginReloadAssembly (165ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (639ms)
-			LoadAssemblies (133ms)
+		EndReloadAssembly (864ms)
+			LoadAssemblies (163ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (229ms)
+			SetupTypeCache (300ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (305ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (420ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (113ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (137ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				RefreshPlugins (147ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (192ms)
+				ProcessInitializeOnLoadMethodAttributes (67ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.019705 seconds.
+Registered in 0.029788 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\temp\FMP\Frank's Toy Store\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\temp\FMP\Frank's Toy Store\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -81,45 +81,45 @@ Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.685 seconds
+- Completed reload, in  2.236 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1686ms)
-		BeginReloadAssembly (261ms)
+	ReloadAssembly (2238ms)
+		BeginReloadAssembly (380ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (1341ms)
-			LoadAssemblies (193ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (1741ms)
+			LoadAssemblies (276ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (473ms)
+			SetupTypeCache (648ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (63ms)
-			SetupLoadedEditorAssemblies (537ms)
+			RebuildScriptCaches (78ms)
+			SetupLoadedEditorAssemblies (681ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (88ms)
-				ProcessInitializeOnLoadAttributes (429ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (555ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
 				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.24 seconds
-Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.30 seconds
+Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 105.7 MB.
-System memory in use after: 105.9 MB.
+Unloading 2965 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 108.4 MB.
+System memory in use after: 108.6 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3393.
-Total: 4.726600 ms (FindLiveObjects: 0.350000 ms CreateObjectMapping: 0.091600 ms MarkObjects: 4.191100 ms  DeleteObjects: 0.091000 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3410.
+Total: 4.803500 ms (FindLiveObjects: 0.440600 ms CreateObjectMapping: 0.147700 ms MarkObjects: 4.110700 ms  DeleteObjects: 0.101900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -134,150 +134,109 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.013556 seconds 
+  path: Assets/Textures/Robots/Frank
+  artifactKey: Guid(cb082138121d3cb4a88394a6a169d152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank using Guid(cb082138121d3cb4a88394a6a169d152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42544e6253c74717c24af2f59b218c4f') in 0.017237 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001148 seconds.
-  path: Assets/3D Models
-  artifactKey: Guid(555302b495b631f428165f8be68afb0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Models using Guid(555302b495b631f428165f8be68afb0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7693fed6a7b4eec90072fb5f16f1588') in 0.008691 seconds 
+  Time since last request: 0.001810 seconds.
+  path: Assets/3D Models/Robots/Frank/Frank.fbx
+  artifactKey: Guid(8aa98bd501136be4c961ea719feabf9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D Models/Robots/Frank/Frank.fbx using Guid(8aa98bd501136be4c961ea719feabf9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48268a3e08b0e47850557dfdead59464') in 0.499376 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.493864 seconds.
-  path: Assets/Sounds
-  artifactKey: Guid(12f63b8493ca1b54297e97f926a795b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds using Guid(12f63b8493ca1b54297e97f926a795b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de8e28fcd0a02be9f20c220cbf1c16d') in 0.010185 seconds 
+  Time since last request: 0.001164 seconds.
+  path: Assets/Textures/Robots/Frank/Frank head Diffuse.png
+  artifactKey: Guid(3296eb8a206c30b4bb457fd69c45a0c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Frank head Diffuse.png using Guid(3296eb8a206c30b4bb457fd69c45a0c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59e6f6589fd6ea7e31c4c28a46afbbcf') in 0.051699 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.751916 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(fb3f3efb70903f5489fdeeeff2a1c533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(fb3f3efb70903f5489fdeeeff2a1c533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6977067109c7a39e54118309fb2491a') in 0.009573 seconds 
+  Time since last request: 57.842548 seconds.
+  path: Assets/Textures/Robots/Frank/Plane_Frank_PBR_Diffuse.png
+  artifactKey: Guid(0334c5d54e2eeb847ae744470b56cf06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Plane_Frank_PBR_Diffuse.png using Guid(0334c5d54e2eeb847ae744470b56cf06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09d004a9b67d4777b47f643fb5e0585') in 0.023713 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.526984 seconds.
-  path: Assets/Levels
-  artifactKey: Guid(fb3f3efb70903f5489fdeeeff2a1c533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Levels using Guid(fb3f3efb70903f5489fdeeeff2a1c533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1deaf19190b351988cec6f8eef4ef6af') in 0.011131 seconds 
+  Time since last request: 0.000867 seconds.
+  path: Assets/Textures/Robots/Frank/Plane_Frank_PBR_Normal.exr
+  artifactKey: Guid(c3bb37e1d0f921f49aac74111785137a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Plane_Frank_PBR_Normal.exr using Guid(c3bb37e1d0f921f49aac74111785137a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bb6145ac31fdc0b20999b9c8afec94d') in 0.044687 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 47.775902 seconds.
-  path: Assets/NewBehaviourScript.cs
-  artifactKey: Guid(a5bf0eb8a5a05cb4686875a29790ab34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NewBehaviourScript.cs using Guid(a5bf0eb8a5a05cb4686875a29790ab34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4725782f64694363832f82eaea7c5e1b') in 0.068752 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.022127 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\temp\FMP\Frank's Toy Store\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\temp\FMP\Frank's Toy Store\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.641 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1642ms)
-		BeginReloadAssembly (215ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (48ms)
-		EndReloadAssembly (1347ms)
-			LoadAssemblies (193ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (476ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (542ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (71ms)
-				ProcessInitializeOnLoadAttributes (450ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2943 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 105.6 MB.
-System memory in use after: 105.8 MB.
-
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3395.
-Total: 4.530700 ms (FindLiveObjects: 0.336800 ms CreateObjectMapping: 0.089700 ms MarkObjects: 4.070800 ms  DeleteObjects: 0.031400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 53.687897 seconds.
+  path: Assets/Textures/Robots/Frank/Materials
+  artifactKey: Guid(ab419f677ba8a034da6730b1925991bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Materials using Guid(ab419f677ba8a034da6730b1925991bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f32f48ace439432fe3280fffce38903') in 0.011356 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.093218 seconds.
-  path: Assets/Scripts
-  artifactKey: Guid(b3e66e67e8a60a04ca9211c7a6197d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(b3e66e67e8a60a04ca9211c7a6197d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa01b3893c226c1cc3de6021ebfb6ed3') in 0.016369 seconds 
+  Time since last request: 0.915154 seconds.
+  path: Assets/Textures/Robots/Frank/Materials/Plane_Frank_PBR_Diffuse.mat
+  artifactKey: Guid(8e9d0190b635e274c80d35c95418d3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Materials/Plane_Frank_PBR_Diffuse.mat using Guid(8e9d0190b635e274c80d35c95418d3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54826a0ba77867092b6b286ce61262f0') in 0.030247 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.221268 seconds.
-  path: Assets/2D Sprites
-  artifactKey: Guid(69b5a71b08c2ca048ab4ef928f63d15a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Sprites using Guid(69b5a71b08c2ca048ab4ef928f63d15a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca89599a07f9a571ed29b815b94195a1') in 0.009272 seconds 
+  Time since last request: 22.040667 seconds.
+  path: Assets/Textures/Robots/Frank/Plane_Frank_PBR_Normal.exr
+  artifactKey: Guid(c3bb37e1d0f921f49aac74111785137a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Plane_Frank_PBR_Normal.exr using Guid(c3bb37e1d0f921f49aac74111785137a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aff618cb73ee9eabfb7d643bc63f909') in 0.025351 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8495.810400 seconds.
-  path: Assets/3D Models/Toy Store.obj
-  artifactKey: Guid(d736606580e207241aa8dce20dd9d567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Models/Toy Store.obj using Guid(d736606580e207241aa8dce20dd9d567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd06b2f1fcda2bef06256832c1defa89b') in 0.774546 seconds 
+  Time since last request: 17.795969 seconds.
+  path: Assets/Textures/Robots/Frank/Plane_Frank_Limbs_PBR_Diffuse.png
+  artifactKey: Guid(0f985deee2a66644da28c1c0639793ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Plane_Frank_Limbs_PBR_Diffuse.png using Guid(0f985deee2a66644da28c1c0639793ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe884974f5c2fc13d09bda30cd68cdd') in 0.024144 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 229.916653 seconds.
-  path: Assets/Textures
-  artifactKey: Guid(5fd58cd555dd3d1469da7b0291670126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures using Guid(5fd58cd555dd3d1469da7b0291670126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '701bc1b2bc854c564f12d9bff425ad9d') in 0.009433 seconds 
+  Time since last request: 23.677630 seconds.
+  path: Assets/Textures/Robots/Frank/Materials/Plane_Frank_Limbs_PBR_Diffuse.mat
+  artifactKey: Guid(4d101b0eef55c3348b900f1800391daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Materials/Plane_Frank_Limbs_PBR_Diffuse.mat using Guid(4d101b0eef55c3348b900f1800391daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7a9232ff26d4002da10e9bcdc3e3629') in 0.026608 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 62.664870 seconds.
-  path: Assets/Textures/Building Texture.png
-  artifactKey: Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Building Texture.png using Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3815286ae23a44ca173714c240778fee') in 0.079511 seconds 
+  Time since last request: 29.411167 seconds.
+  path: Assets/Materials/Robots/Plane_Frank_Limbs_PBR_Diffuse.mat
+  artifactKey: Guid(4d101b0eef55c3348b900f1800391daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robots/Plane_Frank_Limbs_PBR_Diffuse.mat using Guid(4d101b0eef55c3348b900f1800391daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab7ed37fca7ecba3c2ffe9c689c5cc11') in 0.038613 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2720.653327 seconds.
-  path: Assets/Textures/Building Texture.png
-  artifactKey: Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Building Texture.png using Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4622cf664a7c3f31f1ee13cd9f0177a6') in 0.876573 seconds 
+  Time since last request: 47.836325 seconds.
+  path: Assets/Textures/Robots/Frank/Materials/Frank head Diffuse.mat
+  artifactKey: Guid(6e5e4353fa46481428793fede880050a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Robots/Frank/Materials/Frank head Diffuse.mat using Guid(6e5e4353fa46481428793fede880050a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59e2adedc7c429f2fbf720f909bc8d4') in 0.022559 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 493.062976 seconds.
-  path: Assets/Textures/Building Texture.png
-  artifactKey: Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Building Texture.png using Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1161d47142b55af18e4fe1261b6c76c') in 0.097916 seconds 
+  Time since last request: 45.385075 seconds.
+  path: Assets/Materials/Robots/Frank head Diffuse.mat
+  artifactKey: Guid(6e5e4353fa46481428793fede880050a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robots/Frank head Diffuse.mat using Guid(6e5e4353fa46481428793fede880050a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6337cb6a6d9a91056df0788f7359841d') in 0.028968 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 686.395117 seconds.
-  path: Assets/Textures/Building Texture.png
-  artifactKey: Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Building Texture.png using Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1139e0cd9a8ad622aed886e90c346ed8') in 0.083537 seconds 
+  Time since last request: 0.000423 seconds.
+  path: Assets/Materials/Robots/Plane_Frank_PBR_Diffuse.mat
+  artifactKey: Guid(8e9d0190b635e274c80d35c95418d3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robots/Plane_Frank_PBR_Diffuse.mat using Guid(8e9d0190b635e274c80d35c95418d3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ac47f1884055c1bffa8cf05c8cfe549') in 0.027714 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 54.018387 seconds.
-  path: Assets/Textures/Building Texture.png
-  artifactKey: Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Building Texture.png using Guid(b62dc004ef7a3244da7bcf34262e3b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d36e58c810f7a1729d20018cb1ad093') in 0.063821 seconds 
+  Time since last request: 0.000577 seconds.
+  path: Assets/Materials/Robots/Teeth.mat
+  artifactKey: Guid(7f98b0cc980d9d54a86c7f5039b04874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robots/Teeth.mat using Guid(7f98b0cc980d9d54a86c7f5039b04874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c422ba7490b56f271a5cd233aa1b3b20') in 0.025431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 322.190119 seconds.
+  path: Assets/Materials/Robots/Frank Base.mat
+  artifactKey: Guid(8e9d0190b635e274c80d35c95418d3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robots/Frank Base.mat using Guid(8e9d0190b635e274c80d35c95418d3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e0f22b7c41926c8fea06467fcd31576') in 0.027572 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.930982 seconds.
+  path: Assets/Materials/Robots/Frank Head.mat
+  artifactKey: Guid(6e5e4353fa46481428793fede880050a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robots/Frank Head.mat using Guid(6e5e4353fa46481428793fede880050a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '820ba130d7a28177b75f8a9a6fc124bc') in 0.027276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.863435 seconds.
+  path: Assets/Materials/Robots/Frank Limbs.mat
+  artifactKey: Guid(4d101b0eef55c3348b900f1800391daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robots/Frank Limbs.mat using Guid(4d101b0eef55c3348b900f1800391daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d2d742ffa8d473afb6f105a281c4162') in 0.025639 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
