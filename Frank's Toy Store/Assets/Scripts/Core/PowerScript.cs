@@ -7,7 +7,7 @@ using TMPro;
 public class PowerScript : MonoBehaviour
 {
     public static float power = 100;
-    static int powerUsage = 1;
+    public static int powerUsage = 1;
     static float powerDrain;
     public TextMeshPro powerText;
     public Sprite level5, level4 , level3 , level2 , level1;
