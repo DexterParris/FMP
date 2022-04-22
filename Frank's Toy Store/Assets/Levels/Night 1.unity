@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.253
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.2235462, g: 0.25072357, b: 0.29599646, a: 0.253}
+  m_IndirectSpecularColor: {r: 0.0010137049, g: 0.000055309167, b: 0.0000000132402524, a: 0.253}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -887,11 +887,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8aa98bd501136be4c961ea719feabf9e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8aa98bd501136be4c961ea719feabf9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.34
+      value: -0.964
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8aa98bd501136be4c961ea719feabf9e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1345,7 +1345,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c22ebaebbb387bd41b4f32631c32d39d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c22ebaebbb387bd41b4f32631c32d39d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1609,7 +1609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -1679,13 +1679,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: -0.7274288, y: 0.067695044, z: 0.12849082, w: -0.67063767}
+  m_LocalRotation: {x: 0.67350143, y: -0.1287568, z: 0.06718775, w: -0.72477806}
   m_LocalPosition: {x: 8.5, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 73.393, y: 256.346, z: -108.634}
+  m_LocalEulerAnglesHint: {x: -73.532, y: 437.85602, z: -72.814}
 --- !u!1001 &872124631
 PrefabInstance:
   m_ObjectHideFlags: 0
