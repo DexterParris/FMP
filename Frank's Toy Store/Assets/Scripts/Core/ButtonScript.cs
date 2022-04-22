@@ -113,27 +113,32 @@ public class ButtonScript : MonoBehaviour
                 leftdoorbutton.GetComponent<MeshRenderer>().material = Red;
             }
         }
+
     }
 
     void LeftLight()
     {
-        if (LightState == ON)
+        if(PowerScript.power > 0)
         {
-            LightState = OFF;
-            leftlightbutton.GetComponent<MeshRenderer>().material = White;
-            Buzz.Stop();
-            PowerScript.PowerCheck("off");
-            StopCoroutine(Lflickering());
-            Leftlight.enabled = false;
+            if (LightState == ON)
+            {
+                LightState = OFF;
+                leftlightbutton.GetComponent<MeshRenderer>().material = White;
+                Buzz.Stop();
+                PowerScript.PowerCheck("off");
+                StopCoroutine(Lflickering());
+                Leftlight.enabled = false;
+            }
+            else if (LightState == OFF)
+            {
+                LightState = ON;
+                leftlightbutton.GetComponent<MeshRenderer>().material = Purple;
+                Buzz.Play();
+                PowerScript.PowerCheck("on");
+                StartCoroutine(Lflickering());
+            }
         }
-        else if (LightState == OFF)
-        {
-            LightState = ON;
-            leftlightbutton.GetComponent<MeshRenderer>().material = Purple;
-            Buzz.Play();
-            PowerScript.PowerCheck("on");
-            StartCoroutine(Lflickering());
-        }
+        
     }
 
     void RightDoor()
@@ -155,23 +160,27 @@ public class ButtonScript : MonoBehaviour
 
     void RightLight()
     {
-        if (RLightState == ON)
+        if(PowerScript.power > 0)
         {
-            RLightState = OFF;
-            rightlightbutton.GetComponent<MeshRenderer>().material = White;
-            Buzz.Stop();
-            PowerScript.PowerCheck("off");
-            StopCoroutine(Rflickering());
-            Rightlight.enabled = false;
+            if (RLightState == ON)
+            {
+                RLightState = OFF;
+                rightlightbutton.GetComponent<MeshRenderer>().material = White;
+                Buzz.Stop();
+                PowerScript.PowerCheck("off");
+                StopCoroutine(Rflickering());
+                Rightlight.enabled = false;
+            }
+            else if (RLightState == OFF)
+            {
+                RLightState = ON;
+                rightlightbutton.GetComponent<MeshRenderer>().material = Purple;
+                Buzz.Play();
+                PowerScript.PowerCheck("on");
+                StartCoroutine(Rflickering());
+            }
         }
-        else if (RLightState == OFF)
-        {
-            RLightState = ON;
-            rightlightbutton.GetComponent<MeshRenderer>().material = Purple;
-            Buzz.Play();
-            PowerScript.PowerCheck("on");
-            StartCoroutine(Rflickering());
-        }
+        
 
     }
 
