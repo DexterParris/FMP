@@ -143,19 +143,23 @@ public class ButtonScript : MonoBehaviour
 
     void RightDoor()
     {
-        if(rightanim.GetBool("Closed") == false)
+        if(PowerScript.power >0)
         {
-            rightanim.SetBool("Closed",true);
-            PowerScript.PowerCheck("on");
-            rightdoorbutton.GetComponent<MeshRenderer>().material = Green;
-            Slam.Play();
+            if(rightanim.GetBool("Closed") == false)
+            {
+                rightanim.SetBool("Closed",true);
+                PowerScript.PowerCheck("on");
+                rightdoorbutton.GetComponent<MeshRenderer>().material = Green;
+                Slam.Play();
+            }
+            else
+            {
+                rightanim.SetBool("Closed",false);
+                PowerScript.PowerCheck("off");
+                rightdoorbutton.GetComponent<MeshRenderer>().material = Red;
+            }
         }
-        else
-        {
-            rightanim.SetBool("Closed",false);
-            PowerScript.PowerCheck("off");
-            rightdoorbutton.GetComponent<MeshRenderer>().material = Red;
-        }
+       
     }
 
     void RightLight()
