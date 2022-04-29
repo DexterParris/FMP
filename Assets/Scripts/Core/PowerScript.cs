@@ -16,6 +16,7 @@ public class PowerScript : MonoBehaviour
 
     void Start () 
     {
+        jumpscared = false;
         power = 100;
         powerUsage = 1;
         InvokeRepeating("OutputTime", 1f, 1f);  //1s delay, repeat every 1s

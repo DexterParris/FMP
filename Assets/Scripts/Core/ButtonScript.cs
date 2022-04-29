@@ -19,6 +19,8 @@ public class ButtonScript : MonoBehaviour
     Animator leftanim;
     Animator rightanim;
 
+    public static bool LeftDoorState,RightDoorState;
+
     Light Leftlight;
     Light Rightlight;
 
@@ -51,6 +53,8 @@ public class ButtonScript : MonoBehaviour
     {   
         leftanim.SetFloat("Power", PowerScript.power);
         rightanim.SetFloat("Power", PowerScript.power);
+        LeftDoorState = leftanim.GetBool("Closed");
+        RightDoorState = rightanim.GetBool("Closed");
 
         if(PowerScript.power == 0)
         {

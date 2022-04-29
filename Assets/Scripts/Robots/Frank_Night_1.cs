@@ -48,8 +48,16 @@ public class Frank_Night_1 : MonoBehaviour
         }
         else if (anim.GetInteger("Position") == 5)
         {
-            PowerScript.jumpscared = true;
-            anim.SetInteger("Position", 6);
+            if(ButtonScript.RightDoorState == true)
+            {
+                anim.SetInteger("Position",0);
+            }
+            else
+            {
+                PowerScript.jumpscared = true;
+                anim.SetInteger("Position", 6);
+            }
+            
 
         }
     }
