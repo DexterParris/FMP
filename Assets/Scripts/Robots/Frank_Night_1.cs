@@ -12,7 +12,7 @@ public class Frank_Night_1 : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
-        InvokeRepeating("move", 5f, 5f);
+        InvokeRepeating("move", 2f, 2f);
     }
     
     
