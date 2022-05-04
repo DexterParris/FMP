@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Frank_Night_1 : MonoBehaviour
 {
+
+    
     Animator anim;
     public int randomnum;
 
