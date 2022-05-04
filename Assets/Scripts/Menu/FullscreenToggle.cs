@@ -16,7 +16,7 @@ public class FullscreenToggle : MonoBehaviour
         
     }
 
-    void FullscreenToggleNow()
+    public void FullscreenToggleNow()
     {
         if(Screen.fullScreen)
         {
