@@ -13,6 +13,7 @@ public class LoadVolume : MonoBehaviour
     {
         volumeValue = PlayerPrefs.GetFloat("Volume");
         mixer.SetFloat("MasterVol", Mathf.Log10(volumeValue)*20);
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame

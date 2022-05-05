@@ -408,6 +408,7 @@ MonoBehaviour:
   selectedButton: {fileID: 457914154}
   backButton: {fileID: 193631287}
   anim: {fileID: 1736859419}
+  continueButton: {fileID: 768479300}
 --- !u!1 &288610692
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +999,7 @@ MonoBehaviour:
   selectedButton: {fileID: 457914154}
   backButton: {fileID: 193631287}
   anim: {fileID: 1736859419}
+  continueButton: {fileID: 768479300}
 --- !u!1 &602104547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1859,7 @@ MonoBehaviour:
   selectedButton: {fileID: 457914154}
   backButton: {fileID: 193631287}
   anim: {fileID: 1736859419}
+  continueButton: {fileID: 768479300}
 --- !u!1 &1143379340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,6 +3379,7 @@ MonoBehaviour:
   selectedButton: {fileID: 457914154}
   backButton: {fileID: 193631287}
   anim: {fileID: 1736859419}
+  continueButton: {fileID: 768479300}
 --- !u!1 &2002189115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,6 +3532,7 @@ MonoBehaviour:
   selectedButton: {fileID: 457914154}
   backButton: {fileID: 193631287}
   anim: {fileID: 1736859419}
+  continueButton: {fileID: 768479300}
 --- !u!114 &2002189121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3589,7 +3594,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 2768cdc4edbbc454691d178a590fd1fc, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 733879091fa979441b21072628b113ec, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 13dc32780d82cc0419ed66603bd35702, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

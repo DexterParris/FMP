@@ -14,11 +14,13 @@ public class MainButtonScript : MonoBehaviour
     public GameObject selectedButton;
     public GameObject backButton;
     public Animator anim;
+    public TextMeshProUGUI continueButton;
 
     // Start is called before the first frame update
     void Start()
     {
         currentNight = PlayerPrefs.GetString("currentNight");
+        continueButton.text = "Continue " + currentNight;
         selectedButton.GetComponent<Button>().Select();
     }
 
@@ -49,7 +51,7 @@ public class MainButtonScript : MonoBehaviour
 
     public void NewGame()
     {
-        PlayerPrefs.SetString("currentNight","Night1");
+        PlayerPrefs.SetString("currentNight","Night 1");
         StartCoroutine(ChangeScene());
     }
 
