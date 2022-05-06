@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class CCTVScript : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class CCTVScript : MonoBehaviour
     public static string currentCAM;
     public GameObject map;
     public static bool camsOpen; 
+    public TextMeshProUGUI cameraButton;
 
     // Start is called before the first frame update
     void Start()
@@ -17,20 +20,14 @@ public class CCTVScript : MonoBehaviour
         camsOpen = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ToggleCams()
     {
         if(camsOpen == false)
         {
+            cameraButton.text = ">>>Close Cameras<<<";
             camsOpen = true;
-            mainCam.enabled = false;
             map.SetActive(true);
-            StartCoroutine(ResetCams());
+            ResetCams();
             if(currentCAM == "CAM1")
             {
                 CAM01();
@@ -71,14 +68,16 @@ public class CCTVScript : MonoBehaviour
         else
         {
             camsOpen = false;
+            cameraButton.text = ">>>Open Cameras<<<";
             map.SetActive(false);
-            StartCoroutine(ResetCams());
-            mainCam.enabled = true;
+            ResetCams();
+            
         }
         
     }
 
-    IEnumerator ResetCams()
+
+    void ResetCams()
     {
         CAM1.SetActive(false);
         CAM2.SetActive(false);
@@ -89,61 +88,61 @@ public class CCTVScript : MonoBehaviour
         CAM7.SetActive(false);
         CAM8.SetActive(false);
         CAM9.SetActive(false);
-        yield return null;
+        
     }
 
     public void CAM01()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM1.SetActive(true);
-        currentCAM = "CAM01";
+        currentCAM = "CAM1";
     }
 
     public void CAM02()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM2.SetActive(true);
         currentCAM = "CAM2";
     }
     public void CAM03()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM3.SetActive(true);
         currentCAM = "CAM3";
     }
     public void CAM04()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM4.SetActive(true);
         currentCAM = "CAM4";
     }
     public void CAM05()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM5.SetActive(true);
         currentCAM = "CAM5";
     }
     public void CAM06()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM6.SetActive(true);
         currentCAM = "CAM6";
     }
     public void CAM07()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM7.SetActive(true);
         currentCAM = "CAM7";
     }
     public void CAM08()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM8.SetActive(true);
         currentCAM = "CAM8";
     }
     public void CAM09()
     {
-        StartCoroutine(ResetCams());
+        ResetCams();
         CAM9.SetActive(true);
         currentCAM = "CAM9";
     }

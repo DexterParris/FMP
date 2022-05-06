@@ -27,7 +27,6 @@ public class ButtonScript : MonoBehaviour
     public bool LightState;
     public bool RLightState;
 
-    bool camState;
     const bool OFF = false;
     const bool ON = true;
 
@@ -50,9 +49,8 @@ public class ButtonScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {   
-        camState = CCTVScript.camsOpen;
         leftanim.SetFloat("Power", PowerScript.power);
         rightanim.SetFloat("Power", PowerScript.power);
         LeftDoorState = leftanim.GetBool("Closed");
@@ -63,9 +61,9 @@ public class ButtonScript : MonoBehaviour
             PowerOutage();
         }
         
-        if (Input.GetMouseButtonDown(0) && camState == false)
+        if (Input.GetMouseButtonDown(0))
         {
-            print(camState);
+            
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
