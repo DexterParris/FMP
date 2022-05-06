@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Frank_Night_1 : MonoBehaviour
 {
-
-    
+    int movechance;
     Animator anim;
     public int randomnum;
 
@@ -14,11 +13,21 @@ public class Frank_Night_1 : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
-        InvokeRepeating("move", 2f, 2f);
+        InvokeRepeating("CheckForMove", 1f, 5f);
+
     }
     
+    void CheckForMove()
+    {
+        movechance = Random.Range(1,21);
+        if(movechance <= ActivityLevels.frankActivity && PowerScript.jumpscared == false)
+        {
+            Move();
+        }
+
+    }
     
-    void move()
+    void Move()
     {
         randomnum = Random.Range(1, 3);
         anim.SetInteger("RandomNumber", randomnum);
@@ -62,10 +71,5 @@ public class Frank_Night_1 : MonoBehaviour
             
 
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

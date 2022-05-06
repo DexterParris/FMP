@@ -196,7 +196,7 @@ public class ButtonScript : MonoBehaviour
     {
         while(LightState == ON)
         {
-            yield return new WaitForSeconds(Random.Range(0.04f, 0.06f));
+            yield return new WaitForSeconds(Random.Range(0.02f, 0.06f));
             Leftlight.enabled =true;
             yield return new WaitForSeconds(Random.Range(0.02f, 0.5f));
             Leftlight.enabled =false;
@@ -207,7 +207,7 @@ public class ButtonScript : MonoBehaviour
     {
         while(RLightState == ON)
         {
-            yield return new WaitForSeconds(Random.Range(0.04f, 0.06f));
+            yield return new WaitForSeconds(Random.Range(0.02f, 0.06f));
             Rightlight.enabled =true;
             yield return new WaitForSeconds(Random.Range(0.02f, 0.5f));
             Rightlight.enabled =false;
