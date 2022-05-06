@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CCTVScript : MonoBehaviour
 {
-    public GameObject CAM1,CAM2,CAM3,CAM4,CAM5,CAM6,CAM7,CAM8,CAM9,mainCam;
+    public GameObject CAM1,CAM2,CAM3,CAM4,CAM5,CAM6,CAM7,CAM8,CAM9;
+    public Camera mainCam;
     public static string currentCAM;
     public GameObject map;
     public static bool camsOpen; 
@@ -12,6 +13,7 @@ public class CCTVScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentCAM = "CAM1";
         camsOpen = false;
     }
 
@@ -26,7 +28,7 @@ public class CCTVScript : MonoBehaviour
         if(camsOpen == false)
         {
             camsOpen = true;
-            mainCam.SetActive(false);
+            mainCam.enabled = false;
             map.SetActive(true);
             StartCoroutine(ResetCams());
             if(currentCAM == "CAM1")
@@ -69,9 +71,9 @@ public class CCTVScript : MonoBehaviour
         else
         {
             camsOpen = false;
-            mainCam.SetActive(true);
             map.SetActive(false);
             StartCoroutine(ResetCams());
+            mainCam.enabled = true;
         }
         
     }

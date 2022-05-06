@@ -15,7 +15,7 @@ public class TimeScript : MonoBehaviour
     {
         nightText.text = PlayerPrefs.GetString("currentNight");
         currentTime = 0;
-        InvokeRepeating("ChangeTime", 9f, 8f);
+        InvokeRepeating("ChangeTime", 90f, 89f);
     }
 
     // Update is called once per frame
