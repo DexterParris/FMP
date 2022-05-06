@@ -17,30 +17,29 @@ public class ActivityLevels : MonoBehaviour
     {
         currentNight = PlayerPrefs.GetString("currentNight");
         Debug.Log(currentNight);
+
+        frankActivity = 0;
+        helenActivity = 0;
+        bernardActivity = 0;
+        orvilleActivity = 0;
+
         if(currentNight == "Night 1")
         {
-            frankActivity = 0;
-            helenActivity = 0;
-            bernardActivity = 0;
-            orvilleActivity = 0;
-
-            wait(90);
+            wait(5);
             bernardActivity = 3;
-            wait(89);
+            wait(5);
             helenActivity = 2;
         }
         else if(currentNight == "Night 2")
         {
-            frankActivity = 0;
+            wait(45);
             helenActivity = 4;
             bernardActivity = 5;
             orvilleActivity = 3;
-
-            wait(45);
-            helenActivity = 0;
         }
         else if(currentNight == "Night 3")
         {
+            wait(25);
             frankActivity = 4;
             helenActivity = 7;
             bernardActivity = 9;
@@ -48,6 +47,7 @@ public class ActivityLevels : MonoBehaviour
         }
         else if(currentNight == "Night 4")
         {
+            wait(10);
             frankActivity = 7;
             helenActivity = 10;
             bernardActivity = 14;
@@ -55,6 +55,7 @@ public class ActivityLevels : MonoBehaviour
         }
         else if(currentNight == "Night 5")
         {
+            wait(10);
             frankActivity = 10;
             helenActivity = 12;
             bernardActivity = 16;
@@ -62,6 +63,7 @@ public class ActivityLevels : MonoBehaviour
         }
         else if(currentNight == "Night 6")
         {
+            wait(10);
             frankActivity = 16;
             helenActivity = 16;
             bernardActivity = 16;

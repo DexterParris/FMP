@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class PowerScript : MonoBehaviour
@@ -10,7 +11,7 @@ public class PowerScript : MonoBehaviour
     public static int powerUsage = 1;
     public static bool jumpscared = false;
     static float powerDrain;
-    public TextMeshPro powerText;
+    public TextMeshProUGUI powerText;
     public Sprite level5, level4 , level3 , level2 , level1;
     public GameObject powerIndicator;
 
@@ -30,7 +31,7 @@ public class PowerScript : MonoBehaviour
         {
             power = 0;
         }
-        powerText.text = Mathf.Floor(power)+"%";
+        powerText.text = Mathf.Floor(power)+"";
     }
 
     public static void PowerCheck(string identifier)
@@ -50,27 +51,27 @@ public class PowerScript : MonoBehaviour
         switch (powerUsage)
         {
             case 1:
-                powerIndicator.GetComponent<SpriteRenderer>().sprite = level1;
+                powerIndicator.GetComponent<Image>().sprite = level1;
             break;
             
             case 2:
-                powerIndicator.GetComponent<SpriteRenderer>().sprite = level2;
+                powerIndicator.GetComponent<Image>().sprite = level2;
             break;
 
             case 3:
-                powerIndicator.GetComponent<SpriteRenderer>().sprite = level3;
+                powerIndicator.GetComponent<Image>().sprite = level3;
             break;
 
             case 4:
-                powerIndicator.GetComponent<SpriteRenderer>().sprite = level4;
+                powerIndicator.GetComponent<Image>().sprite = level4;
             break;
 
             case 5:
-                powerIndicator.GetComponent<SpriteRenderer>().sprite = level5;
+                powerIndicator.GetComponent<Image>().sprite = level5;
             break;
             
             default:
-                powerIndicator.GetComponent<SpriteRenderer>().sprite = level5;
+                powerIndicator.GetComponent<Image>().sprite = level5;
             break;
         }
     }
