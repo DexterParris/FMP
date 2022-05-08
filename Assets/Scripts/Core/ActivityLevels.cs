@@ -28,13 +28,13 @@ public class ActivityLevels : MonoBehaviour
             wait(5);
             bernardActivity = 3;
             wait(5);
-            helenActivity = 2;
+            helenActivity = 4;
         }
         else if(currentNight == "Night 2")
         {
             wait(45);
-            helenActivity = 4;
-            bernardActivity = 5;
+            helenActivity = 3;
+            bernardActivity = 4;
             orvilleActivity = 3;
         }
         else if(currentNight == "Night 3")

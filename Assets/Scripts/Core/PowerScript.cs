@@ -48,32 +48,40 @@ public class PowerScript : MonoBehaviour
 
     void Update()
     {
-        switch (powerUsage)
+        if(jumpscared == false)
         {
-            case 1:
-                powerIndicator.GetComponent<Image>().sprite = level1;
-            break;
-            
-            case 2:
-                powerIndicator.GetComponent<Image>().sprite = level2;
-            break;
+            switch (powerUsage)
+            {
+                case 1:
+                    powerIndicator.GetComponent<Image>().sprite = level1;
+                break;
+                
+                case 2:
+                    powerIndicator.GetComponent<Image>().sprite = level2;
+                break;
 
-            case 3:
-                powerIndicator.GetComponent<Image>().sprite = level3;
-            break;
+                case 3:
+                    powerIndicator.GetComponent<Image>().sprite = level3;
+                break;
 
-            case 4:
-                powerIndicator.GetComponent<Image>().sprite = level4;
-            break;
+                case 4:
+                    powerIndicator.GetComponent<Image>().sprite = level4;
+                break;
 
-            case 5:
-                powerIndicator.GetComponent<Image>().sprite = level5;
-            break;
-            
-            default:
-                powerIndicator.GetComponent<Image>().sprite = level5;
-            break;
+                case 5:
+                    powerIndicator.GetComponent<Image>().sprite = level5;
+                break;
+                
+                default:
+                    powerIndicator.GetComponent<Image>().sprite = level5;
+                break;
+            }
         }
+        else
+        {
+            powerIndicator.GetComponent<Image>().sprite = level1;
+        }
+        
     }
 
 }

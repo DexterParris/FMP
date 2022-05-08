@@ -15,13 +15,16 @@ public class TimeScript : MonoBehaviour
     {
         nightText.text = PlayerPrefs.GetString("currentNight");
         currentTime = 0;
-        InvokeRepeating("ChangeTime", 90f, 89f);
+        InvokeRepeating("ChangeTime", 60f, 60f);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(PowerScript.jumpscared == true)
+        {
+            wait(2f);
+            StartCoroutine(ChangeScene());
+        }
     }
 
     public void ChangeTime()
@@ -83,5 +86,10 @@ public class TimeScript : MonoBehaviour
         yield return new WaitForSeconds(1f);
         
         SceneManager.LoadScene("Main Menu");
+    }
+
+    IEnumerator wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }
