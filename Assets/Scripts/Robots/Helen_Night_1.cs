@@ -7,12 +7,14 @@ public class Helen_Night_1 : MonoBehaviour
 {
     int movechance;
     Animator anim;
+    bool cancheckforJumpscare;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         InvokeRepeating("CheckForMove", 1f, 5f);
+        cancheckforJumpscare = true;
 
     }
     
@@ -28,9 +30,10 @@ public class Helen_Night_1 : MonoBehaviour
 
     void Update()
     {
-        if (anim.GetInteger("Position") == 4)
+        if (cancheckforJumpscare &&anim.GetInteger("Position") == 4)
         {
             StartCoroutine(jumpscareCheck());
+            cancheckforJumpscare = false;
 
         }
     }
@@ -65,6 +68,7 @@ public class Helen_Night_1 : MonoBehaviour
         if (ButtonScript.RightDoorState == true)
         {
             anim.SetInteger("Position", 0);
+            cancheckforJumpscare = true;
         }
         else
         {

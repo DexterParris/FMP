@@ -35,7 +35,7 @@ public class ActivityLevels : MonoBehaviour
             wait(45);
             helenActivity = 3;
             bernardActivity = 4;
-            orvilleActivity = 3;
+            orvilleActivity = 4;
         }
         else if(currentNight == "Night 3")
         {
