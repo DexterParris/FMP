@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class TimeScript : MonoBehaviour
 {
@@ -17,14 +18,15 @@ public class TimeScript : MonoBehaviour
     {
         nightText.text = PlayerPrefs.GetString("currentNight");
         currentTime = 0;
-        InvokeRepeating("ChangeTime", 2f, 2f);
+        InvokeRepeating("ChangeTime", 60f, 60f);
+        
     }
 
     void Update()
     {
         if(PowerScript.jumpscared == true)
         {
-            wait(2f);
+            wait(3f);
             StartCoroutine(ChangeScene());
         }
     }
@@ -33,7 +35,6 @@ public class TimeScript : MonoBehaviour
     {
         if(currentTime == 5)
         {
-            
             currentTime = 6;
             timeText.text = ("0"+currentTime+":AM");
             ButtonScript.LeftDoorState = true;

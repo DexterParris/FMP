@@ -25,7 +25,15 @@ public class Bernard_Night_1 : MonoBehaviour
         }
 
     }
-    
+    void Update()
+    {
+        if (anim.GetInteger("Position") == 3)
+        {
+            StartCoroutine(jumpscareCheck());
+            
+        }
+    }
+
     void Move()
     {
         
@@ -44,19 +52,19 @@ public class Bernard_Night_1 : MonoBehaviour
             anim.SetInteger("Position", 3);
 
         }
-        else if (anim.GetInteger("Position") == 3)
-        {
-            if(ButtonScript.LeftDoorState == true)
-            {
-                anim.SetInteger("Position",0);
-            }
-            else
-            {
-                PowerScript.jumpscared = true;
-                anim.SetInteger("Position", 4);
-            }
-            
+    }
 
+    IEnumerator jumpscareCheck()
+    {
+        yield return new WaitForSeconds(Random.Range(5,8));
+        if (ButtonScript.LeftDoorState == true)
+        {
+            anim.SetInteger("Position", 0);
+        }
+        else
+        {
+            PowerScript.jumpscared = true;
+            anim.SetInteger("Position", 4);
         }
     }
 }

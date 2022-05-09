@@ -45,7 +45,7 @@ public class MainButtonScript : MonoBehaviour
 
     public void ExitGame()
     {
-        print("Exited The Game");
+        anim.SetTrigger("ToBlack");
         Application.Quit();
     }
 
@@ -68,6 +68,7 @@ public class MainButtonScript : MonoBehaviour
         
         SceneManager.LoadScene(PlayerPrefs.GetString("currentNight"));
     }
+
     
 
 }

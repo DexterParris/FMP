@@ -25,7 +25,16 @@ public class Helen_Night_1 : MonoBehaviour
         }
 
     }
-    
+
+    void Update()
+    {
+        if (anim.GetInteger("Position") == 4)
+        {
+            StartCoroutine(jumpscareCheck());
+
+        }
+    }
+
     void Move()
     {
         
@@ -49,19 +58,18 @@ public class Helen_Night_1 : MonoBehaviour
             anim.SetInteger("Position", 4);
 
         }
-        else if (anim.GetInteger("Position") == 4)
+    }
+    IEnumerator jumpscareCheck()
+    {
+        yield return new WaitForSeconds(Random.Range(5, 8));
+        if (ButtonScript.RightDoorState == true)
         {
-            if(ButtonScript.RightDoorState == true)
-            {
-                anim.SetInteger("Position", 0);
-            }
-            else
-            {
-                PowerScript.jumpscared = true;
-                anim.SetInteger("Position", 5);
-            }
-            
-
+            anim.SetInteger("Position", 0);
+        }
+        else
+        {
+            PowerScript.jumpscared = true;
+            anim.SetInteger("Position", 5);
         }
     }
 }
