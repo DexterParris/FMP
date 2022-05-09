@@ -77,6 +77,13 @@ public class CCTVScript : MonoBehaviour
                 CAM09();
             }
         }
+        else if(TimeScript.currentTime == 6)
+        {
+            camsOpen = false;
+            cameraButton.text = ">>>Open Cameras<<<";
+            map.SetActive(false);
+            ResetCams();
+        }
         else
         {
             camsOpen = false;

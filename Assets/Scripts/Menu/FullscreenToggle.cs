@@ -18,15 +18,7 @@ public class FullscreenToggle : MonoBehaviour
 
     public void FullscreenToggleNow()
     {
-        if(Screen.fullScreen)
-        {
-            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
-        }
-        else
-        {
-            Screen.fullScreenMode = FullScreenMode.Windowed;
-        } 
-
+        Screen.fullScreen = !Screen.fullScreen;
     }
     
 }

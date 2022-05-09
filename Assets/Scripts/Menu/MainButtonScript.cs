@@ -19,6 +19,11 @@ public class MainButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(!PlayerPrefs.HasKey("currentNight"))
+        {
+            PlayerPrefs.SetString("currentNight","Night 1");
+        }
+
         currentNight = PlayerPrefs.GetString("currentNight");
         continueButton.text = "Continue " + currentNight;
         selectedButton.GetComponent<Button>().Select();

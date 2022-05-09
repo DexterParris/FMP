@@ -26,9 +26,9 @@ public class ActivityLevels : MonoBehaviour
         if(currentNight == "Night 1")
         {
             wait(5);
-            bernardActivity = 3;
+            bernardActivity = 2;
             wait(5);
-            helenActivity = 4;
+            helenActivity = 2;
         }
         else if(currentNight == "Night 2")
         {

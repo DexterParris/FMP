@@ -25,7 +25,7 @@ public class PowerScript : MonoBehaviour
 
     void OutputTime() 
     {
-        powerDrain = powerUsage * 0.2f;
+        powerDrain = powerUsage * 0.12f;
         power -= powerDrain;  
         if(power < 0)
         {
