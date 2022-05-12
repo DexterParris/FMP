@@ -25,21 +25,23 @@ public class ActivityLevels : MonoBehaviour
 
         if(currentNight == "Night 1")
         {
-            wait(5);
+            StartCoroutine(wait(120));
             bernardActivity = 2;
-            wait(5);
+            StartCoroutine(wait(60));
             helenActivity = 2;
+            StartCoroutine(wait(60));
+            bernardActivity = 3;
         }
         else if(currentNight == "Night 2")
         {
-            wait(45);
+            StartCoroutine(wait(45));
             helenActivity = 3;
-            bernardActivity = 4;
+            bernardActivity = 3;
             orvilleActivity = 4;
         }
         else if(currentNight == "Night 3")
         {
-            wait(25);
+            StartCoroutine(wait(25));
             frankActivity = 4;
             helenActivity = 7;
             bernardActivity = 9;
@@ -47,7 +49,7 @@ public class ActivityLevels : MonoBehaviour
         }
         else if(currentNight == "Night 4")
         {
-            wait(10);
+            StartCoroutine(wait(10));
             frankActivity = 7;
             helenActivity = 10;
             bernardActivity = 14;
@@ -55,7 +57,7 @@ public class ActivityLevels : MonoBehaviour
         }
         else if(currentNight == "Night 5")
         {
-            wait(10);
+            StartCoroutine(wait(10));
             frankActivity = 10;
             helenActivity = 12;
             bernardActivity = 16;
@@ -63,7 +65,7 @@ public class ActivityLevels : MonoBehaviour
         }
         else if(currentNight == "Night 6")
         {
-            wait(10);
+            StartCoroutine(wait(10));
             frankActivity = 16;
             helenActivity = 16;
             bernardActivity = 16;
@@ -71,6 +73,7 @@ public class ActivityLevels : MonoBehaviour
         }
         else if(currentNight == "Night 7")
         {
+            StartCoroutine(wait(15));
             frankActivity = PlayerPrefs.GetInt("frankActivity");
             helenActivity = PlayerPrefs.GetInt("helenActivity");
             bernardActivity = PlayerPrefs.GetInt("bernardActivity");

@@ -7,14 +7,12 @@ public class Bernard_Night_1 : MonoBehaviour
 {
     int movechance;
     Animator anim;
-    bool cancheckforJumpscare;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         InvokeRepeating("CheckForMove", 1f, 5f);
-        cancheckforJumpscare = true;
 
     }
     
@@ -55,15 +53,13 @@ public class Bernard_Night_1 : MonoBehaviour
 
     IEnumerator jumpscareCheck()
     {
+        yield return new WaitForSeconds(Random.Range(6, 8));
         if (ButtonScript.LeftDoorState == true)
         {
-            yield return new WaitForSeconds(Random.Range(5, 8));
             anim.SetInteger("Position", 0);
-            cancheckforJumpscare = true;
         }
         else
         {
-            yield return new WaitForSeconds(Random.Range(3, 5));
             PowerScript.jumpscared = true;
             anim.SetInteger("Position", 4);
         }
