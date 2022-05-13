@@ -10,11 +10,12 @@ public class Frank_Night_1 : MonoBehaviour
     public int randomnum;
     bool canDoPowerOutage;
     public AudioSource outageSound;
+    public GameObject frankLight;
 
     // Start is called before the first frame update
     void Start()
     {
-        canDoPowerOutage = false;
+        canDoPowerOutage = true;
         anim = gameObject.GetComponent<Animator>();
         InvokeRepeating("CheckForMove", 1f, 5f);
 
@@ -24,6 +25,7 @@ public class Frank_Night_1 : MonoBehaviour
     {
         if(PowerScript.power <= 0 && canDoPowerOutage == true)
         {
+            print("look at me");
             canDoPowerOutage = false;
             StartCoroutine(FrankPowerOutage());
 
@@ -90,9 +92,10 @@ public class Frank_Night_1 : MonoBehaviour
     IEnumerator FrankPowerOutage()
     {
         yield return new WaitForSeconds(6);
+        frankLight.SetActive(true);
         anim.SetInteger("Position",7);
         outageSound.Play();
-        yield return new WaitForSeconds(23);
+        yield return new WaitForSeconds(27);
         PowerScript.jumpscared = true;
         anim.SetInteger("Position",6);
 
