@@ -25,10 +25,6 @@ public class Bernard_Night_1 : MonoBehaviour
         }
 
     }
-    void Update()
-    {
-
-    }
 
     void Move()
     {

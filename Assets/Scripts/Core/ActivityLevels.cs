@@ -25,65 +25,94 @@ public class ActivityLevels : MonoBehaviour
 
         if(currentNight == "Night 1")
         {
-            StartCoroutine(wait(120));
-            bernardActivity = 2;
-            StartCoroutine(wait(60));
-            helenActivity = 2;
-            StartCoroutine(wait(60));
-            bernardActivity = 3;
+            StartCoroutine(Night1());
         }
         else if(currentNight == "Night 2")
         {
-            StartCoroutine(wait(45));
-            helenActivity = 3;
-            bernardActivity = 3;
-            orvilleActivity = 4;
+            StartCoroutine(Night2());
         }
         else if(currentNight == "Night 3")
         {
-            StartCoroutine(wait(25));
-            frankActivity = 4;
-            helenActivity = 7;
-            bernardActivity = 9;
-            orvilleActivity = 5;
+            StartCoroutine(Night3());
         }
         else if(currentNight == "Night 4")
         {
-            StartCoroutine(wait(10));
-            frankActivity = 7;
-            helenActivity = 10;
-            bernardActivity = 14;
-            orvilleActivity = 14;
+            StartCoroutine(Night4());
         }
         else if(currentNight == "Night 5")
         {
-            StartCoroutine(wait(10));
-            frankActivity = 10;
-            helenActivity = 12;
-            bernardActivity = 16;
-            orvilleActivity = 15;
+            StartCoroutine(Night5());
         }
         else if(currentNight == "Night 6")
         {
-            StartCoroutine(wait(10));
-            frankActivity = 16;
-            helenActivity = 16;
-            bernardActivity = 16;
-            orvilleActivity = 17;
+            StartCoroutine(Night6());
         }
         else if(currentNight == "Night 7")
         {
-            StartCoroutine(wait(15));
-            frankActivity = PlayerPrefs.GetInt("frankActivity");
-            helenActivity = PlayerPrefs.GetInt("helenActivity");
-            bernardActivity = PlayerPrefs.GetInt("bernardActivity");
-            orvilleActivity = PlayerPrefs.GetInt("orvilleActivity");
+            StartCoroutine(Night7());
         }
     }
 
-    IEnumerator wait(float seconds)
+    IEnumerator Night1()
     {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(120);
+        bernardActivity = 2;
+        yield return new WaitForSeconds(60);
+        helenActivity = 2;
+        yield return new WaitForSeconds(60);
+        bernardActivity = 3;
     }
+    IEnumerator Night2()
+    {
+        yield return new WaitForSeconds(45);
+        helenActivity = 3;
+        bernardActivity = 3;
+        orvilleActivity = 4;
+    }
+    IEnumerator Night3()
+    {
+        yield return new WaitForSeconds(45);
+        frankActivity = 4;
+        helenActivity = 7;
+        bernardActivity = 9;
+        orvilleActivity = 5;
+    }
+
+    IEnumerator Night4()
+    {
+        yield return new WaitForSeconds(10);
+        frankActivity = 7;
+        helenActivity = 10;
+        bernardActivity = 14;
+        orvilleActivity = 14;
+    }
+
+    IEnumerator Night5()
+    {
+        yield return new WaitForSeconds(10);
+        frankActivity = 10;
+        helenActivity = 12;
+        bernardActivity = 16;
+        orvilleActivity = 15;
+    }
+
+    IEnumerator Night6()
+    {
+        yield return new WaitForSeconds(10);
+        frankActivity = 16;
+        helenActivity = 16;
+        bernardActivity = 16;
+        orvilleActivity = 17;
+    }
+
+    IEnumerator Night7()
+    {
+        yield return new WaitForSeconds(15);
+        frankActivity = PlayerPrefs.GetInt("frankActivity");
+        helenActivity = PlayerPrefs.GetInt("helenActivity");
+        bernardActivity = PlayerPrefs.GetInt("bernardActivity");
+        orvilleActivity = PlayerPrefs.GetInt("orvilleActivity");
+    }
+
 
 }
