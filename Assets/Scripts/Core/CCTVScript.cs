@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
 
 public class CCTVScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CCTVScript : MonoBehaviour
     public GameObject map;
     public static bool camsOpen; 
     public TextMeshProUGUI cameraButton;
+    public AudioSource buttonClick;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +114,7 @@ public class CCTVScript : MonoBehaviour
 
     public void CAM01()
     {
+        buttonClick.Play();
         ResetCams();
         CAM1.SetActive(true);
         currentCAM = "CAM1";
@@ -119,48 +122,56 @@ public class CCTVScript : MonoBehaviour
 
     public void CAM02()
     {
+        buttonClick.Play();
         ResetCams();
         CAM2.SetActive(true);
         currentCAM = "CAM2";
     }
     public void CAM03()
     {
+        buttonClick.Play();
         ResetCams();
         CAM3.SetActive(true);
         currentCAM = "CAM3";
     }
     public void CAM04()
     {
+        buttonClick.Play();
         ResetCams();
         CAM4.SetActive(true);
         currentCAM = "CAM4";
     }
     public void CAM05()
     {
+        buttonClick.Play();
         ResetCams();
         CAM5.SetActive(true);
         currentCAM = "CAM5";
     }
     public void CAM06()
     {
+        buttonClick.Play();
         ResetCams();
         CAM6.SetActive(true);
         currentCAM = "CAM6";
     }
     public void CAM07()
     {
+        buttonClick.Play();
         ResetCams();
         CAM7.SetActive(true);
         currentCAM = "CAM7";
     }
     public void CAM08()
     {
+        buttonClick.Play();
         ResetCams();
         CAM8.SetActive(true);
         currentCAM = "CAM8";
     }
     public void CAM09()
     {
+        buttonClick.Play();
         ResetCams();
         CAM9.SetActive(true);
         currentCAM = "CAM9";

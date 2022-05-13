@@ -24,8 +24,8 @@ public class ButtonScript : MonoBehaviour
     Light Leftlight;
     Light Rightlight;
 
-    public bool LightState;
-    public bool RLightState;
+    public static bool LightState;
+    public static bool RLightState;
 
     const bool OFF = false;
     const bool ON = true;

@@ -1,20 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 
 public class Frank_Night_1 : MonoBehaviour
 {
     int movechance;
     Animator anim;
     public int randomnum;
+    bool canDoPowerOutage;
+    public AudioSource outageSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        canDoPowerOutage = false;
         anim = gameObject.GetComponent<Animator>();
         InvokeRepeating("CheckForMove", 1f, 5f);
 
+    }
+
+    void Update()
+    {
+        if(PowerScript.power <= 0 && canDoPowerOutage == true)
+        {
+            canDoPowerOutage = false;
+            StartCoroutine(FrankPowerOutage());
+
+        }
     }
     
     void CheckForMove()
@@ -71,5 +84,18 @@ public class Frank_Night_1 : MonoBehaviour
             
 
         }
+
     }
+
+    IEnumerator FrankPowerOutage()
+    {
+        yield return new WaitForSeconds(6);
+        anim.SetInteger("Position",7);
+        outageSound.Play();
+        yield return new WaitForSeconds(23);
+        PowerScript.jumpscared = true;
+        anim.SetInteger("Position",6);
+
+    }
+
 }

@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 public class Bernard_Night_1 : MonoBehaviour
 {
     int movechance;
     Animator anim;
+    bool canMakeScarySound;
+    public AudioSource spookysound;
 
     // Start is called before the first frame update
     void Start()
     {
+        canMakeScarySound = true;
         anim = gameObject.GetComponent<Animator>();
         InvokeRepeating("CheckForMove", 1f, 5f);
 
@@ -24,6 +28,15 @@ public class Bernard_Night_1 : MonoBehaviour
             Move();
         }
 
+    }
+
+    private void Update()
+    {
+        if (anim.GetInteger("Position") == 3 && canMakeScarySound == true && ButtonScript.LightState == true)
+        {
+            MakeScarySound();
+            canMakeScarySound = false;
+        }
     }
 
     void Move()
@@ -53,11 +66,17 @@ public class Bernard_Night_1 : MonoBehaviour
         if (ButtonScript.LeftDoorState == true)
         {
             anim.SetInteger("Position", 0);
+            canMakeScarySound = true;
         }
         else
         {
             PowerScript.jumpscared = true;
             anim.SetInteger("Position", 4);
         }
+    }
+
+    void MakeScarySound()
+    {
+        spookysound.Play();
     }
 }
