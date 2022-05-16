@@ -12,10 +12,7 @@ public class PhoneCallScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(wait(10));
-        anim.SetBool("PhoneCall", true);
-        endCallButton.SetActive(true);
-        phonecall.Play();
+        StartCoroutine(PhoneCall()); 
     }
 
     // Update is called once per frame
@@ -34,8 +31,16 @@ public class PhoneCallScript : MonoBehaviour
         endCallButton.SetActive(false);
     }
 
-    IEnumerator wait(float seconds)
+    IEnumerator PhoneCall()
     {
-        yield return new WaitForSeconds(seconds);
+        if(!phonecall.isPlaying)
+        {
+            yield return new WaitForSeconds(5);
+            anim.SetBool("PhoneCall", true);
+            phonecall.Play();
+            yield return new WaitForSeconds(7);
+            endCallButton.SetActive(true);
+        }
+        
     }
 }

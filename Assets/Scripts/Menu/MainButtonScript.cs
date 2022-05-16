@@ -29,6 +29,54 @@ public class MainButtonScript : MonoBehaviour
         selectedButton.GetComponent<Button>().Select();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            print("HELP ME AHSASH");
+            PlayerPrefs.SetString("currentNight", "Night 1");
+            currentNight = PlayerPrefs.GetString("currentNight");
+            continueButton.text = "Continue " + currentNight;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            print("HELP ME");
+            PlayerPrefs.SetString("currentNight", "Night 2");
+            currentNight = PlayerPrefs.GetString("currentNight");
+            continueButton.text = "Continue " + currentNight;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            PlayerPrefs.SetString("currentNight", "Night 3");
+            currentNight = PlayerPrefs.GetString("currentNight");
+            continueButton.text = "Continue " + currentNight;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            PlayerPrefs.SetString("currentNight", "Night 4");
+            currentNight = PlayerPrefs.GetString("currentNight");
+            continueButton.text = "Continue " + currentNight;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            PlayerPrefs.SetString("currentNight", "Night 5");
+            currentNight = PlayerPrefs.GetString("currentNight");
+            continueButton.text = "Continue " + currentNight;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            PlayerPrefs.SetString("currentNight", "Night 6");
+            continueButton.text = "Continue " + currentNight;
+            currentNight = PlayerPrefs.GetString("currentNight");
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            PlayerPrefs.SetString("currentNight", "Night 7");
+            currentNight = PlayerPrefs.GetString("currentNight");
+            continueButton.text = "Continue " + currentNight;
+        }
+    }
+
     public void OpenOptionsMenu()
     {
         OptionsMenu.SetActive(true);
@@ -68,6 +116,8 @@ public class MainButtonScript : MonoBehaviour
         
         SceneManager.LoadScene(PlayerPrefs.GetString("currentNight"));
     }
+
+
 
     
 

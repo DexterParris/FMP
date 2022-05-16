@@ -34,7 +34,7 @@ public class Bernard_Night_1 : MonoBehaviour
     {
         if (anim.GetInteger("Position") == 3 && canMakeScarySound == true && ButtonScript.LightState == true)
         {
-            MakeScarySound();
+            spookysound.Play();
             canMakeScarySound = false;
         }
     }
@@ -75,8 +75,4 @@ public class Bernard_Night_1 : MonoBehaviour
         }
     }
 
-    void MakeScarySound()
-    {
-        spookysound.Play();
-    }
 }

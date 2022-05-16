@@ -25,7 +25,7 @@ public class PowerScript : MonoBehaviour
         jumpscared = false;
         power = 100;
         powerUsage = 1;
-        InvokeRepeating("OutputTime", 1f, 0.1f);  //1s delay, repeat every 1s
+        InvokeRepeating("OutputTime", 1f, 1f);  //1s delay, repeat every 1s
     }
 
     void OutputTime() 
@@ -55,10 +55,12 @@ public class PowerScript : MonoBehaviour
     {
         if(PowerScript.power <= 0 && canDoPowerOutage == true)
         {
+            powerIndicator.GetComponent<Image>().sprite = level1;
             canDoPowerOutage = false;
             powerShutDownSound.Play();
             officelight1.SetActive(false);
             officelight2.SetActive(false);
+            StartCoroutine(PowerCut());
         }
         if(jumpscared == false)
         {
@@ -94,6 +96,12 @@ public class PowerScript : MonoBehaviour
             powerIndicator.GetComponent<Image>().sprite = level1;
         }
         
+    }
+
+    IEnumerator PowerCut()
+    {
+        yield return new WaitForSeconds(5);
+        CameraScript.PowerOutage = true;
     }
 
 }

@@ -24,10 +24,11 @@ public class CCTVScript : MonoBehaviour
 
     void Update()
     {
-        if(PowerScript.jumpscared == true)
+        if (PowerScript.jumpscared == true || PowerScript.power <= 0)
         {
             camsOpen = false;
             cameraButton.text = ">>>Open Cameras<<<";
+            cameraButton.text = ">>>  Disabled  <<<";
             map.SetActive(false);
             ResetCams();
         }

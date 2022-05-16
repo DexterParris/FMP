@@ -13,6 +13,8 @@ public class TimeScript : MonoBehaviour
     public TextMeshProUGUI nightText;
     public GameObject winVideo;
     public GameObject loadingScreen;
+    public TextMeshProUGUI deskClock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class TimeScript : MonoBehaviour
         {
             currentTime = 6;
             timeText.text = ("0"+currentTime+":AM");
+            deskClock.text = ("0" + currentTime);
             ButtonScript.LeftDoorState = true;
             ButtonScript.RightDoorState = true;
             StartCoroutine(win());
@@ -46,6 +49,7 @@ public class TimeScript : MonoBehaviour
         {
             currentTime += 1;
             timeText.text = ("0"+currentTime+":AM");
+            deskClock.text = ("0" + currentTime);
         }
         
     }

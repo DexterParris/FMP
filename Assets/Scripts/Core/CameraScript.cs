@@ -7,6 +7,7 @@ public class CameraScript : MonoBehaviour
     Vector2 mouse;
 
     public Animator anim;
+    public static bool PowerOutage;
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -21,7 +22,11 @@ public class CameraScript : MonoBehaviour
             anim.SetInteger("Position", 1);
             
         }
-        else 
+        else if(PowerOutage == true && PowerScript.jumpscared == false) 
+        {
+            anim.SetInteger("Position", 0);
+        }
+        else
         {
             if (Input.mousePosition.x < Screen.width * 0.2)
             {
@@ -36,6 +41,7 @@ public class CameraScript : MonoBehaviour
                 anim.SetInteger("Position", 1);
             }
         }
+
         
         
     }

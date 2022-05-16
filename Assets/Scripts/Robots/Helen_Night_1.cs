@@ -7,14 +7,15 @@ public class Helen_Night_1 : MonoBehaviour
 {
     int movechance;
     Animator anim;
-    bool cancheckforJumpscare;
+    bool canMakeScarySound;
+    public AudioSource spookysound;
 
     // Start is called before the first frame update
     void Start()
     {
+        canMakeScarySound = true;
         anim = gameObject.GetComponent<Animator>();
         InvokeRepeating("CheckForMove", 1f, 5f);
-        cancheckforJumpscare = true;
 
     }
     
@@ -30,12 +31,12 @@ public class Helen_Night_1 : MonoBehaviour
 
     void Update()
     {
-        if (cancheckforJumpscare &&anim.GetInteger("Position") == 4)
+        if (anim.GetInteger("Position") == 4 && canMakeScarySound == true && ButtonScript.RLightState == true)
         {
-            StartCoroutine(jumpscareCheck());
-            cancheckforJumpscare = false;
-
+            spookysound.Play();
+            canMakeScarySound = false;
         }
+
     }
 
     void Move()
@@ -59,6 +60,7 @@ public class Helen_Night_1 : MonoBehaviour
         else if (anim.GetInteger("Position") == 3)
         {
             anim.SetInteger("Position", 4);
+            StartCoroutine(jumpscareCheck());
 
         }
     }
@@ -68,7 +70,7 @@ public class Helen_Night_1 : MonoBehaviour
         if (ButtonScript.RightDoorState == true)
         {
             anim.SetInteger("Position", 0);
-            cancheckforJumpscare = true;
+            canMakeScarySound = true;
         }
         else
         {
