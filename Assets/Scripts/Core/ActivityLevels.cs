@@ -47,9 +47,9 @@ public class ActivityLevels : MonoBehaviour
         {
             StartCoroutine(Night6());
         }
-        else if(currentNight == "Night 7")
+        else if(currentNight == "Custom Night")
         {
-            StartCoroutine(Night7());
+            StartCoroutine(CustomNight());
         }
     }
 
@@ -105,7 +105,7 @@ public class ActivityLevels : MonoBehaviour
         orvilleActivity = 17;
     }
 
-    IEnumerator Night7()
+    IEnumerator CustomNight()
     {
         yield return new WaitForSeconds(15);
         frankActivity = PlayerPrefs.GetInt("frankActivity");

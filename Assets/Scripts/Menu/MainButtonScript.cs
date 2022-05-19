@@ -10,9 +10,11 @@ public class MainButtonScript : MonoBehaviour
     public static string currentNight;
     public GameObject OptionsMenu;
     public GameObject MainMenu;
+    public GameObject CustomMenu;
 
     public GameObject selectedButton;
     public GameObject backButton;
+    public GameObject customBackButton;
     public Animator anim;
     public TextMeshProUGUI continueButton;
 
@@ -25,22 +27,25 @@ public class MainButtonScript : MonoBehaviour
         }
 
         currentNight = PlayerPrefs.GetString("currentNight");
+        if (PlayerPrefs.GetString("currentNight") == "Custom Night")
+        {
+            PlayerPrefs.SetString("currentNight", "Night 6");
+        }
         continueButton.text = "Continue " + currentNight;
         selectedButton.GetComponent<Button>().Select();
     }
 
-    private void Update()
+    void Update()
     {
+        //this code is for testing purposes only
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            print("HELP ME AHSASH");
             PlayerPrefs.SetString("currentNight", "Night 1");
             currentNight = PlayerPrefs.GetString("currentNight");
             continueButton.text = "Continue " + currentNight;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            print("HELP ME");
             PlayerPrefs.SetString("currentNight", "Night 2");
             currentNight = PlayerPrefs.GetString("currentNight");
             continueButton.text = "Continue " + currentNight;
@@ -69,12 +74,7 @@ public class MainButtonScript : MonoBehaviour
             continueButton.text = "Continue " + currentNight;
             currentNight = PlayerPrefs.GetString("currentNight");
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha7))
-        {
-            PlayerPrefs.SetString("currentNight", "Night 7");
-            currentNight = PlayerPrefs.GetString("currentNight");
-            continueButton.text = "Continue " + currentNight;
-        }
+
     }
 
     public void OpenOptionsMenu()
@@ -87,8 +87,16 @@ public class MainButtonScript : MonoBehaviour
     public void OpenMainMenu()
     {
         OptionsMenu.SetActive(false);
+        CustomMenu.SetActive(false);
         MainMenu.SetActive(true);
         selectedButton.GetComponent<Button>().Select();
+    }
+
+    public void OpenCustomMenu()
+    {
+        CustomMenu.SetActive(true);
+        customBackButton.GetComponent<Button>().Select();
+        MainMenu.SetActive(false);
     }
 
     public void ExitGame()
@@ -108,13 +116,19 @@ public class MainButtonScript : MonoBehaviour
         StartCoroutine(ChangeScene());
     }
 
+    public void CustomNight()
+    {
+        PlayerPrefs.SetString("currentNight", "Custom Night");
+        StartCoroutine(ChangeScene());
+    }
+
     IEnumerator ChangeScene()
     {
         anim.SetTrigger("ToBlack");
         
         yield return new WaitForSeconds(1f);
         
-        SceneManager.LoadScene(PlayerPrefs.GetString("currentNight"));
+        SceneManager.LoadScene("Night 1");
     }
 
 

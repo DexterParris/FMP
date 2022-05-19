@@ -14,6 +14,7 @@ public class TimeScript : MonoBehaviour
     public GameObject winVideo;
     public GameObject loadingScreen;
     public TextMeshProUGUI deskClock;
+    public AudioSource jumpscareSound;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class TimeScript : MonoBehaviour
     {
         if(PowerScript.jumpscared == true)
         {
+            jumpscareSound.Play();
             wait(3f);
             StartCoroutine(ChangeScene());
         }
@@ -93,12 +95,12 @@ public class TimeScript : MonoBehaviour
             }
             else if(PlayerPrefs.GetString("currentNight")=="Night 6")
             {
-                PlayerPrefs.SetString("currentNight","Night 7");
+                PlayerPrefs.SetString("currentNight","Night 6");
                 StartCoroutine(ChangeScene());
             }
-            else if(PlayerPrefs.GetString("currentNight")=="Night 7")
+            else if(PlayerPrefs.GetString("currentNight")=="Custom Night")
             {
-                PlayerPrefs.SetString("currentNight","Night 7");
+                PlayerPrefs.SetString("currentNight","Night 6");
                 StartCoroutine(ChangeScene());
             }
     }

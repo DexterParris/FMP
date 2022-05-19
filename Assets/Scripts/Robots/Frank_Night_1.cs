@@ -11,6 +11,7 @@ public class Frank_Night_1 : MonoBehaviour
     bool canDoPowerOutage;
     public AudioSource outageSound;
     public GameObject frankLight;
+    public AudioSource laugh;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,11 @@ public class Frank_Night_1 : MonoBehaviour
     {
         randomnum = Random.Range(1, 3);
         anim.SetInteger("RandomNumber", randomnum);
+
+        if (anim.GetInteger("Position") <= 5) 
+        {
+            laugh.Play();
+        }
         
         if (anim.GetInteger("Position") == 0) 
         {
