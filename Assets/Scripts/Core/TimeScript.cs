@@ -29,9 +29,7 @@ public class TimeScript : MonoBehaviour
     {
         if(PowerScript.jumpscared == true)
         {
-            jumpscareSound.Play();
-            wait(3f);
-            StartCoroutine(ChangeScene());
+            StartCoroutine(Jumpscare());
         }
     }
 
@@ -55,7 +53,7 @@ public class TimeScript : MonoBehaviour
         }
         
     }
-
+    
 
     IEnumerator win()
     {
@@ -117,5 +115,11 @@ public class TimeScript : MonoBehaviour
     IEnumerator wait(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+    }
+
+    IEnumerator Jumpscare()
+    {
+        yield return new WaitForSeconds(3);
+        StartCoroutine(ChangeScene());
     }
 }

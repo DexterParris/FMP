@@ -41,8 +41,6 @@ public class CameraScript : MonoBehaviour
                 anim.SetInteger("Position", 1);
             }
         }
-
-        
-        
+   
     }
 }

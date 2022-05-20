@@ -8,11 +8,13 @@ public class PhoneCallScript : MonoBehaviour
     public AudioSource phonecall;
     public GameObject endCallButton;
     public Animator anim;
+    public AudioClip Night1,Night2,Night3,Night4,Night5,Night6,CustomNight;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(PhoneCall()); 
+        
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class PhoneCallScript : MonoBehaviour
 
     IEnumerator PhoneCall()
     {
+        print("hello");
         if(!phonecall.isPlaying)
         {
             yield return new WaitForSeconds(5);

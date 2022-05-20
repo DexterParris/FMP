@@ -9,6 +9,8 @@ public class Orville_Night_1 : MonoBehaviour
     Animator anim;
     bool cancheckforJumpscare;
     bool cancheckforCamera;
+    public AudioSource jumpscareSound;
+    public Animator NoSignal;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,7 @@ public class Orville_Night_1 : MonoBehaviour
     void CheckForMove()
     {
         movechance = Random.Range(1, 21);
-        if (movechance <= ActivityLevels.orvilleActivity && PowerScript.jumpscared == false)
+        if (movechance <= ActivityLevels.orvilleActivity && PowerScript.jumpscared == false && PowerScript.power > 0)
         {
             Move();
         }
@@ -33,6 +35,7 @@ public class Orville_Night_1 : MonoBehaviour
     {
         if(anim.GetInteger("Position") < 3 && cancheckforCamera && CCTVScript.currentCAM == "CAM9")
         {
+            
             StartCoroutine(ResetPos());
             cancheckforCamera = false;
         }
@@ -49,16 +52,28 @@ public class Orville_Night_1 : MonoBehaviour
 
         if (anim.GetInteger("Position") == 0)
         {
+            if(CCTVScript.currentCAM == "CAM9")
+            {
+                NoSignal.SetTrigger("Active");
+            }
             anim.SetInteger("Position", 1);
 
         }
         else if (anim.GetInteger("Position") == 1)
         {
+            if(CCTVScript.currentCAM == "CAM9")
+            {
+                NoSignal.SetTrigger("Active");
+            }
             anim.SetInteger("Position", 2);
 
         }
         else if (anim.GetInteger("Position") == 2)
         {
+            if(CCTVScript.currentCAM == "CAM9")
+            {
+                NoSignal.SetTrigger("Active");
+            }
             StartCoroutine(run());
 
         }
@@ -71,11 +86,20 @@ public class Orville_Night_1 : MonoBehaviour
         {
             anim.SetInteger("Position", 0);
             cancheckforJumpscare = true;
+            if(CCTVScript.currentCAM == "CAM9")
+            {
+                NoSignal.SetTrigger("Active");
+            }
         }
         else
         {
-            PowerScript.jumpscared = true;
-            anim.SetInteger("Position", 5);
+            if(PowerScript.power > 0)
+            {
+                jumpscareSound.Play();
+                PowerScript.jumpscared = true;
+                anim.SetInteger("Position", 5);
+            }
+            
         }
     }
 
@@ -83,13 +107,28 @@ public class Orville_Night_1 : MonoBehaviour
     {
         anim.SetInteger("Position", 3);
         yield return new WaitForSeconds(1.5f);
-        anim.SetInteger("Position", 4);
+
+        if(ButtonScript.LeftDoorState == true)
+        {
+            anim.SetInteger("Position", 4);
+        }
+        else
+        {
+            jumpscareSound.Play();
+            PowerScript.jumpscared = true;
+            anim.SetInteger("Position", 5);
+        }
+        
     }
 
     IEnumerator ResetPos() 
     {
         yield return new WaitForSeconds(3);
         anim.SetInteger("Position", 0);
+        if(CCTVScript.currentCAM == "CAM9")
+        {
+            NoSignal.SetTrigger("Active");
+        }
         cancheckforCamera = true;
     }
 }

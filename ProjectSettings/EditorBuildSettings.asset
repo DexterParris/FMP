@@ -11,22 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Night 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Levels/Night 2.unity
-    guid: c6267ea2478a7314a939f7ef1754def8
-  - enabled: 1
-    path: Assets/Levels/Night 3.unity
-    guid: 947e71f974f852a43b0dcf3df269df3b
-  - enabled: 1
-    path: Assets/Levels/Night 4.unity
-    guid: dbf90fb1360b0ca4c9a1f77d5919a43e
-  - enabled: 1
-    path: Assets/Levels/Night 5.unity
-    guid: 21965c0c81d2d244ca42b7e15994c3c1
-  - enabled: 1
-    path: Assets/Levels/Night 6.unity
-    guid: 661cfca7a3c5bbb4eb8cf88b37589625
-  - enabled: 1
-    path: Assets/Levels/Night 7.unity
-    guid: 26f5e5d15abe9ce4688e5848d5cdb52a
   m_configObjects: {}

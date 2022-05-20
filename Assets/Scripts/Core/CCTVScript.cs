@@ -27,7 +27,6 @@ public class CCTVScript : MonoBehaviour
         if (PowerScript.jumpscared == true || PowerScript.power <= 0)
         {
             camsOpen = false;
-            cameraButton.text = ">>>Open Cameras<<<";
             cameraButton.text = ">>>  Disabled  <<<";
             map.SetActive(false);
             ResetCams();
@@ -39,8 +38,8 @@ public class CCTVScript : MonoBehaviour
     {
         if(camsOpen == false && PowerScript.jumpscared == false)
         {
-            cameraButton.text = ">>>Close Cameras<<<";
             camsOpen = true;
+            cameraButton.text = ">>>Close Cameras<<<";
             map.SetActive(true);
             ResetCams();
             if(currentCAM == "CAM1")
@@ -110,7 +109,6 @@ public class CCTVScript : MonoBehaviour
         CAM7.SetActive(false);
         CAM8.SetActive(false);
         CAM9.SetActive(false);
-        
     }
 
     public void CAM01()
