@@ -126,13 +126,17 @@ public class MainButtonScript : MonoBehaviour
     {
         anim.SetTrigger("ToBlack");
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
+
+        Game();
         
-        SceneManager.LoadScene("Night 1");
     }
 
+    void Game()
+    {
+        SceneManager.LoadScene("Night 1");
 
+    }
 
-    
 
 }

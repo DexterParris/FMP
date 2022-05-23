@@ -27,7 +27,12 @@ public class TimeScript : MonoBehaviour
 
     void Update()
     {
-        if(PowerScript.jumpscared == true)
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            StartCoroutine(ChangeScene());
+        }
+
+        if (PowerScript.jumpscared == true)
         {
             StartCoroutine(Jumpscare());
         }
@@ -107,9 +112,10 @@ public class TimeScript : MonoBehaviour
     {
         anim.SetTrigger("ToBlack");
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.3f);
+
+        Menu();
         
-        SceneManager.LoadScene("Main Menu");
     }
 
     IEnumerator wait(float seconds)
@@ -121,5 +127,10 @@ public class TimeScript : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         StartCoroutine(ChangeScene());
+    }
+
+    void Menu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

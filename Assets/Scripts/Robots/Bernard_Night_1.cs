@@ -32,15 +32,6 @@ public class Bernard_Night_1 : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (anim.GetInteger("Position") == 3 && canMakeScarySound == true && ButtonScript.LightState == true)
-        {
-            spookysound.Play();
-            canMakeScarySound = false;
-        }
-    }
-
     void Move()
     {
         
@@ -75,6 +66,14 @@ public class Bernard_Night_1 : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (anim.GetInteger("Position") == 3 && canMakeScarySound == true && ButtonScript.LightState == true)
+        {
+            spookysound.Play();
+            canMakeScarySound = false;
+        }
+    }
     IEnumerator jumpscareCheck()
     {
         yield return new WaitForSeconds(Random.Range(6, 8));

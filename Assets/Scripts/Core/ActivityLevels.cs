@@ -65,44 +65,45 @@ public class ActivityLevels : MonoBehaviour
     IEnumerator Night2()
     {
         yield return new WaitForSeconds(45);
-        helenActivity = 3;
-        bernardActivity = 3;
-        orvilleActivity = 4;
+        helenActivity = 2;
+        bernardActivity = 1;
+        yield return new WaitForSeconds(75);
+        orvilleActivity = 2;
     }
     IEnumerator Night3()
     {
         yield return new WaitForSeconds(45);
-        frankActivity = 4;
-        helenActivity = 7;
-        bernardActivity = 9;
-        orvilleActivity = 5;
+        frankActivity = 2;
+        helenActivity = 3;
+        bernardActivity = 3;
+        orvilleActivity = 3;
     }
 
     IEnumerator Night4()
     {
-        yield return new WaitForSeconds(10);
-        frankActivity = 7;
-        helenActivity = 10;
-        bernardActivity = 14;
-        orvilleActivity = 14;
+        yield return new WaitForSeconds(15);
+        frankActivity = 3;
+        helenActivity = 4;
+        bernardActivity = 5;
+        orvilleActivity = 6;
     }
 
     IEnumerator Night5()
     {
-        yield return new WaitForSeconds(10);
-        frankActivity = 10;
-        helenActivity = 12;
-        bernardActivity = 16;
-        orvilleActivity = 15;
+        yield return new WaitForSeconds(15);
+        frankActivity = 5;
+        helenActivity = 5;
+        bernardActivity = 5;
+        orvilleActivity = 7;
     }
 
     IEnumerator Night6()
     {
-        yield return new WaitForSeconds(10);
-        frankActivity = 16;
-        helenActivity = 16;
-        bernardActivity = 16;
-        orvilleActivity = 17;
+        yield return new WaitForSeconds(150);
+        frankActivity = 8;
+        helenActivity = 7;
+        bernardActivity = 9;
+        orvilleActivity = 15;
     }
 
     IEnumerator CustomNight()

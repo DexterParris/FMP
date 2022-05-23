@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.253
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18647096, g: 0.1907692, b: 0.17835346, a: 0.253}
+  m_IndirectSpecularColor: {r: 0.18647113, g: 0.19076937, b: 0.17835358, a: 0.253}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5303,7 +5303,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 2768cdc4edbbc454691d178a590fd1fc, type: 2}
-  m_audioClip: {fileID: 8300000, guid: fd6631fc420f3e840acbffbfa1a62d69, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5313,7 +5313,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.5234239
+  MinDistance: 5.452435
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -5402,15 +5402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phonecall: {fileID: 524200949}
-  endCallButton: {fileID: 1612180557}
   anim: {fileID: 524200948}
   Night1: {fileID: 8300000, guid: fd6631fc420f3e840acbffbfa1a62d69, type: 3}
-  Night2: {fileID: 0}
-  Night3: {fileID: 0}
-  Night4: {fileID: 0}
-  Night5: {fileID: 0}
-  Night6: {fileID: 0}
-  CustomNight: {fileID: 0}
 --- !u!1 &542625381
 GameObject:
   m_ObjectHideFlags: 0
@@ -10415,7 +10408,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978644350}
   m_LocalRotation: {x: -0, y: -0.06657502, z: -0, w: 0.99778146}
-  m_LocalPosition: {x: 0, y: 0, z: 1326}
+  m_LocalPosition: {x: 0, y: 0, z: 1300}
   m_LocalScale: {x: 1.3573977, y: 5.9798794, z: 1.3573977}
   m_Children: []
   m_Father: {fileID: 1585568234}
@@ -10423,7 +10416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -7.635, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2850, y: 1660}
+  m_AnchoredPosition: {x: -2987, y: 1837}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &978644352
@@ -19329,15 +19322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phonecall: {fileID: 524200949}
-  endCallButton: {fileID: 1612180557}
   anim: {fileID: 524200948}
   Night1: {fileID: 0}
-  Night2: {fileID: 0}
-  Night3: {fileID: 0}
-  Night4: {fileID: 0}
-  Night5: {fileID: 0}
-  Night6: {fileID: 0}
-  CustomNight: {fileID: 0}
 --- !u!1001 &1629211036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22180,7 +22166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833909119}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.68, y: 1.934, z: -2.954}
+  m_LocalPosition: {x: 0.722, y: 1.987, z: -2.954}
   m_LocalScale: {x: 0.052903213, y: 0.083393574, z: 0.083393574}
   m_Children: []
   m_Father: {fileID: 0}
