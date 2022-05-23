@@ -99,7 +99,7 @@ public class ActivityLevels : MonoBehaviour
 
     IEnumerator Night6()
     {
-        yield return new WaitForSeconds(150);
+        yield return new WaitForSeconds(15);
         frankActivity = 8;
         helenActivity = 7;
         bernardActivity = 9;
